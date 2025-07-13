@@ -736,7 +736,7 @@ body {
 
 
     .hamburger-menu span {
-        width: 100%; height: 3px; background-color: background-color: var(--primary-red);
+        width: 100%; height: 3px; background-color: background-color: #f53838;
         border-radius: 3px; transition: all 0.3s ease-in-out;
     }
 
