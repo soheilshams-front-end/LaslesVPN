@@ -100,6 +100,7 @@ body {
 .hamburger-menu {
     display: none;
     cursor: pointer;
+    
 }
 
 /* ==================== استایل بخش اصلی (Hero) ==================== */
@@ -735,7 +736,7 @@ body {
 
 
     .hamburger-menu span {
-        width: 100%; height: 3px; background-color: var(--dark-text);
+        width: 100%; height: 3px; background-color: background-color: var(--primary-red);
         border-radius: 3px; transition: all 0.3s ease-in-out;
     }
 
