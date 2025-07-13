@@ -1,0 +1,910 @@
+/* تعریف متغیرهای رنگ و فونت بر اساس فایل فیگما */
+:root {
+    --primary-red: #F53838;
+    --dark-text: #0B132A;
+    --light-text: #4F5665;
+    --background-light: #F8F8F8;
+    --white-color: #FFFFFF;
+    --border-color: #DDDDDD;
+    
+    --font-family-main: 'Rubik', sans-serif;
+}
+
+/* ریست کردن استایل‌های پیش‌فرض */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* استایل‌های کلی بدنه */
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--white-color);
+    color: var(--dark-text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== استایل هدر ==================== */
+.main-header {
+    padding: 2.5rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 36px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--dark-text);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.btn-signin {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-red);
+    color: var(--white-color);
+    box-shadow: 0 10px 20px rgba(245, 56, 56, 0.3);
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* ==================== استایل بخش اصلی (Hero) ==================== */
+.hero-section {
+    padding: 4rem 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.5rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--dark-text);
+    margin-bottom: 1.25rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 3rem;
+    max-width: 550px;
+}
+
+.btn-get-started {
+    padding: 1rem 4rem;
+    font-weight: 700;
+    box-shadow: 0 15px 30px rgba(245, 56, 56, 0.35);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==================== استایل بخش آمار ==================== */
+.stats-section {
+    padding: 2rem 0;
+    /* این بخش را کمی روی بخش Hero قرار می‌دهیم */
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+}
+
+/* جداکننده عمودی بین آیتم‌ها */
+.stat-item:nth-child(1),
+.stat-item:nth-child(2) {
+    border-right: 2px solid #EEEFF2;
+}
+
+.stat-item img {
+    width: 55px;
+    height: 55px;
+}
+
+.stat-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.stat-item p {
+    font-size: 1.25rem;
+    color: var(--light-text);
+}
+
+/* ==================== استایل بخش ویژگی‌ها ==================== */
+.features-section {
+    padding: 4rem 0;
+}
+
+.features-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7rem;
+}
+
+.features-image {
+    flex: 1;
+}
+
+.features-image img {
+    max-width: 105%;
+}
+
+.features-content {
+    flex: 1;
+}
+
+.features-content .section-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--dark-text);
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+    max-width: 380px;
+}
+
+.features-content .section-description {
+    margin-bottom: 1.25rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--light-text);
+}
+
+.features-list img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==================== استایل بخش قیمت‌گذاری ==================== */
+.pricing-section {
+    padding: 6rem 0;
+    background-color: #F8F8F8;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: flex-end;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem 2.5rem;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.pricing-card:hover
+ {
+    border-color:#F53838 ;
+    box-shadow: 0 25px 50px -12px rgba(245, 56, 56, 0.25);
+}
+
+.plan-icon {
+    width: 145px;
+    margin-bottom: 2rem;
+}
+
+.pricing-card h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #0B132A;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4F5665;
+}
+
+.plan-features img {
+    width: 24px;
+}
+
+.plan-price {
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+.plan-price h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0B132A;
+}
+
+.plan-price span {
+    color: #4F5665;
+    font-weight: 400;
+}
+
+.pricing-card .btn {
+    width: 80%;
+    padding: 0.8rem 1.5rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem auto; /* این خط اصلی‌ترین بخش برای وسط‌چین کردن است */
+}
+
+/* ==================== استایل بخش نقشه جهانی ==================== */
+.global-map-section {
+    padding: 2rem 0 6rem 0;
+    background-color: #fff;
+}
+
+.map-image-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+
+.map-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sponsors-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.sponsors-container img {
+    max-height: 60px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.sponsors-container img:hover {
+    opacity: 1;
+}
+
+/* ==================== استایل بخش نظرات مشتریان ==================== */
+.testimonials-section {
+    padding: 4rem 0 8rem 0;
+    background-color: var(--background-light);
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 2rem;
+    padding: 1.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--white-color);
+    opacity: 0.7;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card.active {
+    border-color: var(--primary-red);
+    box-shadow: 0 20px 40px rgba(245, 56, 56, 0.15);
+    opacity: 1;
+}
+
+.card-header { display: flex; align-items: center; margin-bottom: 1rem; }
+.card-header img { width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem; }
+.card-header-text { flex-grow: 1; }
+.card-header-text h4 { color: var(--dark-text); font-weight: 500; font-size: 1.1rem; }
+.card-header-text span { color: var(--light-text); font-size: 0.9rem; }
+.card-rating { display: flex; align-items: center; gap: 0.5rem; }
+.card-rating span { font-weight: 400; font-size: 1rem; color: var(--dark-text); }
+.card-rating img { width: 16px; height: 16px; }
+.card-body { color: var(--dark-text); }
+
+.slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.slider-pagination .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #DDE0E4;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-pagination .dot.active {
+    background-color: var(--primary-red);
+    width: 45px;
+    border-radius: 32px;
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 1rem;
+}
+
+.arrow-btn {
+    width: 60px; height: 60px; border-radius: 50%;
+    border: 2px solid var(--primary-red);
+    background: var(--white-color);
+    color: var(--primary-red);
+    font-size: 1.5rem; cursor: pointer; transition: all 0.3s ease;
+}
+.arrow-btn:hover { background-color: var(--primary-red); color: var(--white-color); }
+
+
+
+/* ==================== استایل بخش فوتر ==================== */
+.footer-section {
+    padding: 6rem 0 4rem 0;
+    background-color: rgb(232, 232, 232);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.about-col {
+    flex-basis: 35%;
+}
+
+.about-col .logo {
+    margin-bottom: 1.5rem;
+}
+
+.about-col p {
+    max-width: 330px;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #000;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-5px);
+}
+
+.social-icons img {
+    height: 20px;
+}
+
+.copyright-text {
+    color: #AFB5C0;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul a {
+    text-decoration: none;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.footer-col ul a:hover {
+    color: var(--primary-red);
+}
+
+/* ==================== استایل بخش عضویت ==================== */
+.subscribe-section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    /* کمی بخش را بالاتر می‌بریم تا روی پس‌زمینه پایینی شناور باشد */
+    transform: translateY(50%);
+}
+
+.subscribe-content .section-title {
+    max-width: 370px;
+    margin-bottom: 1rem;
+}
+
+.subscribe-content .section-description {
+    max-width: 410px;
+}
+
+
+
+.site-footer-main {
+    background-color: #fff; /* پس‌زمینه طوسی تیره اصلی فوتر */
+    color: #ffffff;           /* رنگ متن پیش‌فرض برای لینک‌ها و متون ثانویه */
+    padding: 60px 0;
+    font-size: 14px;
+    /* transition برای رنگ‌ها دیگر لازم نیست اگر تم روی این بخش تاثیر نمی‌گذارد */
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column.about-column {
+    flex-basis: 25%;
+    min-width: 250px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    height: 28px;
+    margin-right: 10px; /* برای LTR */
+    /* اگر لوگوی SVG شما تیره است و نیاز به سفید شدن دارد: */
+    /* filter: brightness(0) invert(1); */
+}
+[dir="rtl"] .footer-logo img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.footer-logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000; /* رنگ متن لوگو (سفید) */
+    /* حذف استایل گرادینت سراسری برای این span خاص */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+
+.copyright-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000000; /* رنگ متن کپی‌رایت */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7); /* پس‌زمینه نیمه‌شفاف برای آیکون‌ها */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a img { /* اگر از تگ img برای آیکون‌ها استفاده می‌کنید */
+    width: 20px;
+    height: 20px;
+    /* filter: brightness(0) invert(1); /* برای سفید کردن آیکون‌های تیره */
+}
+/* اگر از فونت آیکون یا SVG مستقیم استفاده می‌کنید: */
+.social-icons a svg { /* این استایل برای SVG که در دکمه خبرنامه استفاده شد، اینجا هم اعمال می‌شود */
+    fill: #FFFFFF; /* رنگ آیکون‌های اجتماعی (سفید) */
+    width: 18px;
+    height: 18px;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-red); /* رنگ سبز برند برای هاور */
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-text); /* رنگ عناوین ستون‌ها (سفید) */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--dark-text); /* رنگ لینک‌های فوتر */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-red); /* رنگ هاور لینک‌ها */
+    text-decoration: underline;
+}
+
+
+
+
+/* ======================================== */
+/* ======== RESPONSIVE DESIGN (LaslesVPN) ======== */
+/* ======================================== */
+
+/* برای تبلت‌ها و دستگاه‌های با عرض کمتر از ۹۹۲ پیکسل */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    /* --- هدر و منوی همبرگری --- */
+    .main-nav, .header-actions {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+
+    .hamburger-menu span {
+        width: 100%; height: 3px; background-color: var(--dark-text);
+        border-radius: 3px; transition: all 0.3s ease-in-out;
+    }
+
+
+
+
+    .hamburger-menu.active span:nth-child(1) {
+         transform: translateY(9.5px) rotate(45deg);
+        }
+
+
+    .hamburger-menu.active span:nth-child(2) {
+         opacity: 0; 
+        }
+
+
+    .hamburger-menu.active span:nth-child(3) {
+         transform: translateY(-9.5px) rotate(-45deg); 
+        }
+
+
+
+
+        
+    .main-nav.active {
+        display: flex; flex-direction: row-reverse; justify-content: center;
+        align-items: center; gap: 2.5rem; position: fixed;
+        top: 0; left: 0; width: 100%; height: 100vh;
+        background: var(--white-color); z-index: 1000;
+    }
+    .main-nav.active a { font-size: 1.5rem; }
+
+    /* --- چیدمان ستونی برای بخش‌ها --- */
+    .hero-container, .features-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-content, .features-content { max-width: 100%; }
+    .hero-title, .features-content .section-title { max-width: 100%; margin: 1.5rem auto; }
+    .hero-buttons { justify-content: center; }
+    
+    /* --- بخش آمار --- */
+    .stats-container {
+        flex-direction: column;
+        gap: 2rem;
+        box-shadow: none;
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+    }
+    .stat-item {
+        border-right: none !important;
+        justify-content: center; /* آیتم‌ها را در مرکز افقی قرار می‌دهد */
+        flex-direction: column; /* چیدمان را به ستونی تغییر می‌دهد */
+        text-align: center; /* متن را وسط‌چین می‌کند */
+        gap: 1rem; /* فاصله بین آیکون و متن */
+        width: 100%;
+        box-shadow: rgba(245, 56, 56, 0.35) 0 0 0.3rem;
+        border-radius: 12px;
+        padding: 2rem;
+        width: 70%;
+    }
+
+    /* --- بخش قیمت‌گذاری --- */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* --- بخش نقشه و عضویت --- */
+    .sponsors-container {
+        justify-content: center;
+    }
+    .subscribe-container {
+        flex-direction: column;
+        text-align: center;
+        transform: translateY(0);
+        margin: 2rem 0;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    /* --- فوتر --- */
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right; /* یا center بسته به سلیقه */
+    }
+    .about-col {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image{
+        width: 100%;
+    }
+
+    .features-image{
+        width: 105%;
+    }
+    
+    
+    
+    /* اصلاح استایل لیست ویژگی‌ها در موبایل */
+    .features-list {
+        /* آیتم‌ها را در مرکز افقی قرار می‌دهد */
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        margin-top: 2rem;
+        max-width: 300px; /* برای جلوگیری از کشیده شدن بیش از حد */
+    }
+    
+    .features-list li {
+        font-size: 1.2rem; /* کمی بزرگتر کردن فونت */
+        gap: 1rem; /* افزایش فاصله بین آیکون و متن */
+    }
+    
+    
+    .footer-column {
+        min-width: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
+    }
+    .footer-column.about-column {
+        flex-basis: 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .newsletter-form {
+        margin: 0 auto;
+    }
+
+
+}
+
+
+
+/* Smaller Mobile Devices (e.g., up to 767px) */
+@media (max-width: 767px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+        flex-basis: 100%;
+        /* text-align: center; از والد به ارث می‌برد */
+    }
+    .footer-column h4 {
+        margin-top: 20px;
+    }
+    .footer-column:first-child h4 { /* اولین ستون در حالت موبایل معمولاً نیازی به مارجین بالا ندارد */
+        margin-top: 0;
+    }
+    .footer-column ul li a,
+    .footer-column p {
+        text-align: center !important; /* برای اطمینان از وسط‌چین شدن */
+    }
+}
+
+.main-nav.active ul {
+    flex-direction: column; /* چیدمان آیتم‌ها را به ستونی تغییر می‌دهد */
+    text-align: center;
+    gap: 2.5rem;
+}
+
